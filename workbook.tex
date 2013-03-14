@@ -1,0 +1,147 @@
+\documentclass[a4paper]{article}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{lingmacros}
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+\usepackage[backend=biber,style=authoryear,natbib=true]{biblatex}
+\bibliography{kbgen_proj}
+\title{A Statistical MT Tutorial Workbook}
+\author{Kevin Knight}
+%\date{}
+\begin{document}
+\maketitle
+
+\section{The Overall Plan}
+We want to automatically analyze existing human sentence translations, with an eye toward building
+general translation rules -- we will use these rules to translate new texts automatically.
+I know this looks like a thick workbook, but if you take a day to work through it, you will know almost as
+much about statistical machine translation as anybody!
+The basic text that this tutorial relies on is Brown et al, ``The Mathematics of Statistical Machine
+Translation'', Computational Linguistics, 1993. On top of this excellent presentation, I can only add some
+perspective and perhaps some sympathy for the poor reader, who has (after all) done nothing wrong.
+Important terms are underlined throughout!
+
+\section{Basic Probability}
+Todo
+
+\section{Sums and Products}
+Todo
+
+\section{Statistical Machine Translation}
+Todo
+
+
+\section{Bayesian Reasoning}
+Todo
+
+\section{Word Reordering in Translation}
+Todo
+
+\section{Word Choice in Translatoin}
+Todo
+
+\section{Language Modeling}
+Todo
+
+\section{N-grams}
+Todo
+
+\section{Smoothing}
+Todo
+
+\section{Evaluating Models}
+Todo
+
+\section{Perplexity}
+Todo
+
+\section{Log Probability Arithmetic}
+Todo
+
+\section{Translation Modeling}
+Todo
+
+\section{Translation as String Rewriting}
+Todo
+
+\section{Model 3}
+Todo
+
+\section{Model 3 Parameters}
+Todo
+
+\section{Word-for-Word Alignments}
+Todo
+
+\section{Estimating Parameter Values from Word-for-Word Alignments}
+Todo
+
+\section{Bootstrapping}
+Todo
+
+\section{All Possible Alignments}
+Todo
+
+\section{Collecting Fractional Counts}
+Todo
+
+\section{Alignment Probabilities}
+Todo
+
+\section{$P(a,f|e)$}
+The Model 3 generative story doesn't mention anything about alignments, but an alignment is a way of
+summarizing the various choices that get made according to the story. The probability of producing a
+particular alignment and French string is basically the product of a bunch of smaller probabilities, such as
+for choosing a particular fertility for a particular word ($n$), choosing a particular word translation ($t$),
+moving a word from English position $i$ to French position $j$($d$), etc.
+
+Here's a firt cut
+\begin{itemize}
+    \item $e$ English sentence
+    \item $f$ French sentence
+    \item $e_i$ the $i$th English word
+    \item $f_j$ the $j$th French word
+    \item $l$ number of words in the English sentence
+    \item $m$ number of words in the French sentence
+    \item $a$ alignment (vector of integers $a_1, \cdots, a_m$, where each $a_j$ ranges from 0 to 1) 
+    \item $a_j$ the English position connected to by the $j$th French word in alignment $a$
+    \item $e_{a_j}$ the actual English word connected to by the $j$th French word in alignment $a$
+    \item $\phi_i$ feritlity of English word $i$ (where $i$ ranges from 0 to 1), given the alignment $a$
+\end{itemize}
+\section{Chicken and Egg}
+Todo
+
+\section{Now for the Magic}
+Todo
+
+\section{What is EM doing}
+Todo
+
+\section{Decoding}
+Todo
+
+\section{Practical Problems with Model 3 Training}
+Todo
+
+\section{Efficient Model 1 Training}
+Todo
+
+\section{Best Alignment for Model 1}
+Todo
+
+\section{Back to Model 3}
+Todo
+
+\section{Model 2}
+Todo
+
+\section{Transferring Parameter Values from One Model to Another}
+Todo
+
+\section{Wow}
+Todo
+
+\end{document}
